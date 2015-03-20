@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "XamarinFormsAndroidExtension", "XamarinFormsAndroidExtension\XamarinFormsAndroidExtension.shproj", "{ABD03A5D-19C7-4167-9D8C-3796FB8AF21A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsAndroidExtension.Droid", "Droid\XamarinFormsAndroidExtension.Droid.csproj", "{8E4CF737-6EE2-492B-9391-C00DF375772D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Release|iPhone.Build.0 = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{8E4CF737-6EE2-492B-9391-C00DF375772D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
