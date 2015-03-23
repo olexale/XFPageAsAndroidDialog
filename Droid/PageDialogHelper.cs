@@ -17,8 +17,12 @@ namespace XamarinFormsAndroidExtension.Droid
         {
             var dialogView = CreateAndShowDialog (page);
 
+            // this formula is from "Converting dp units to pixel units" section of http://developer.android.com/guide/practices/screens_support.htm
+            var scale = Forms.Context.Resources.DisplayMetrics.Density;
+            var heightInDp = (int)(requestedHeight * scale + 0.5f);
+
             var layoutParams = dialogView.LayoutParameters;
-            layoutParams.Height = requestedHeight;
+            layoutParams.Height = heightInDp;
             dialogView.LayoutParameters = layoutParams;
         }
 
