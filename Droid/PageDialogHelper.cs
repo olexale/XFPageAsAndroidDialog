@@ -7,34 +7,37 @@ namespace XamarinFormsAndroidExtension.Droid
     public static class PageDialogHelper
     {
         static AlertDialog _dialog;
+        static Android.Views.View _dialogView;
 
-        public static void ShowAsDialog (Page page)
+        public static void ShowAsDialog (INavigation navigation, Page page, double height)
         {
-            CreateAndShowDialog (page);
-        }
+            _dialogView = page.CreateView ();
 
-        public static void ShowAsDialog (Page page, int requestedHeight)
-        {
-            var dialogView = CreateAndShowDialog (page);
+            _dialog = new AlertDialog.Builder (Forms.Context).Create ();
+            _dialog.SetView (_dialogView);
+            _dialog.SetCanceledOnTouchOutside (false);
+            _dialog.SetCancelable (false);
+            _dialog.Show ();
 
             // this formula is from "Converting dp units to pixel units" section of http://developer.android.com/guide/practices/screens_support.htm
             var scale = Forms.Context.Resources.DisplayMetrics.Density;
-            var heightInDp = (int)(requestedHeight * scale + 0.5f);
+            var heightInDp = (int)(height * scale + 0.5f);
 
-            var layoutParams = dialogView.LayoutParameters;
+            var layoutParams = _dialogView.LayoutParameters;
             layoutParams.Height = heightInDp;
-            dialogView.LayoutParameters = layoutParams;
+            _dialogView.LayoutParameters = layoutParams;
+
         }
 
-        static Android.Views.View CreateAndShowDialog (Page page)
+        public static void CloseLastDialog ()
         {
-            var dialogView = page.CreateView ();
-
-            _dialog = new AlertDialog.Builder (Forms.Context).Create ();
-            _dialog.SetView (dialogView);
-            _dialog.Show ();
-
-            return dialogView;
+            if (_dialog != null) {
+                _dialog.Dismiss ();
+                _dialogView.Dispose ();
+                _dialog.Dispose ();
+                _dialogView = null;
+                _dialog = null;
+            }
         }
     }
 }
